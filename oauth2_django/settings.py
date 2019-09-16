@@ -45,14 +45,14 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # ... include the providers you want to enable:
     
-    'allauth.socialaccount.providers.bitbucket',
+    #'allauth.socialaccount.providers.bitbucket',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.instagram',
+    #'allauth.socialaccount.providers.google',
+    #'allauth.socialaccount.providers.instagram',
     'allauth.socialaccount.providers.mailru',
-    'allauth.socialaccount.providers.odnoklassniki',
-    'allauth.socialaccount.providers.twitter',
+    #'allauth.socialaccount.providers.odnoklassniki',
+    #'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.vk',
     
     'my_app'
@@ -173,7 +173,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'updated_time',
         ],
         'EXCHANGE_TOKEN': True,
-        'LOCALE_FUNC': 'path.to.callable',
+        'LOCALE_FUNC': lambda request: 'ru_RU',
         'VERIFIED_EMAIL': False,
         'VERSION': 'v2.12',
     },
